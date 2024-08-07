@@ -27,7 +27,7 @@
       </ul>
 
       <form class="search">
-        <input type="search" name="q" placeholder="Search query">
+        <input type="search" name="q" placeholder="Search query" aria-required="true" >
         <input type="submit" value="Go!">
       </form>
     </div>
@@ -98,8 +98,9 @@
         The following audio clip contains a fact file providing more details about bear mating rituals, along with samples and quotes from experts.
         <br><br>
         <audio controls>
-          <source src="media/bear.mp3" type="audio/mp3" alt = "a video about bears.">
+          <source src="media/bear.mp3" type="audio/mp3">
           <source src="media/bear.ogg" type="audio/ogg">
+          <track kind="subtitles" src="subtitles_en.vtt" srclang="en" />
           <p>It looks like your browser doesn't support HTML5 audio players.</p>
         </audio>
 
@@ -113,7 +114,7 @@
 
         </aside>
         <section class="comments">
-          <div class="show-hide">Show comments</div>
+          <div class="show-hide" data-message="This is the show button" tabindex="0" role="button">Show comments</div>
 
           <div class="comment-wrapper">
 
@@ -129,7 +130,7 @@
                 <input type="text" name="comment" id="comment" placeholder="Enter your comment">
               </div>
               <div>
-                <input type="submit" value="Submit comment">
+                <input type="submit" value="Submit comment" data-message="Submit button" tabindex="0" role="button">
               </div>
             </form>
 
