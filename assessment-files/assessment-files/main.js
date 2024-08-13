@@ -55,15 +55,16 @@ document.onkeydown = (e) => {
 
 // Control transcript display
 
-const transcript = document.querySelector('.transcript');
-const transcriptBtn = document.querySelector('.transcript-container button');
+const transcriptWrap = document.querySelector('.transcript');
+const transcriptBtn = document.querySelector('.transcript-container');
 
 transcriptBtn.onclick = function() {
-  if(transcriptBtn.textContent === 'Show transcript') {
-    transcript.style.height = '150px';
+  let transcriptText = transcriptBtn.textContent;
+  if(transcriptText === 'Show transcript') {
     transcriptBtn.textContent = 'Hide transcript';
+    transcriptWrap.style.display = 'block';
   } else {
-    transcript.style.height = '0';
     transcriptBtn.textContent = 'Show transcript';
+    transcriptWrap.style.display = 'none';
   }
 };
