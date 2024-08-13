@@ -52,3 +52,18 @@ document.onkeydown = (e) => {
     document.activeElement.click();
   }
 };
+
+// Control transcript display
+
+const transcript = document.querySelector('.transcript');
+const transcriptBtn = document.querySelector('.transcript-container button');
+
+transcriptBtn.onclick = function() {
+  if(transcriptBtn.textContent === 'Show transcript') {
+    transcript.style.height = '150px';
+    transcriptBtn.textContent = 'Hide transcript';
+  } else {
+    transcript.style.height = '0';
+    transcriptBtn.textContent = 'Show transcript';
+  }
+};
